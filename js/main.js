@@ -32,8 +32,7 @@ var MAX_HEIGHT = 600;
 				ctx.drawImage(image, 0, 0, image.width, image.height);
 				var mbase64 = canvas.toDataURL("image/jpeg",0.6);
 				ctx=null;
-				$(mtarget).val(mbase64);
-				console.log(mbase64.split("base64,")[1])
+				$(mtarget).val(mbase64.split("base64,")[1]);
 			};
 			image.src = src;
 		}
@@ -45,6 +44,40 @@ var MAX_HEIGHT = 600;
 	    });
 
 
+		//表单提交  photo     name     function      location      email 
+
+		function formsubmit(_photo,_name,_function,_location,_email){
+			$.ajax({
+				type: "POST",
+				url: "/Request.php?model=finish",
+				dataType:"json",
+				data: {
+			       "photo": _photo,
+			       "name":_name,
+			       "function":_function,
+			       "location":_location,
+			       "email":_email
+			    },
+				success: function(data){
+					if(data.code == 1){
+						window.location.href="congratulation.html";
+					}else if(data.code == 2){
+						alert("参数错误");
+					}else{
+						alert("图片未上传");
+					}
+				}
+			});
+		}
+
+
+	    function popup(aclass){
+	    	$(".tip").addClass(aclass).fadeIn();
+	    }
+
+	    function popupclose(){
+	    	$(".tip").attr("class","tip").hide();
+	    }
 
 	    function isEmail(str){
 	        var reg = /^(\w)+(\.\w+)*@(\w)+((\.\w{2,3}){1,3})$/;;
@@ -59,17 +92,43 @@ var MAX_HEIGHT = 600;
 	    		var curVal = $(this).val();
 
 	    		if($(this).attr("name") == "email" && !isEmail(curVal)){
+	    			popup("second");
 	    			$(this).val("").addClass("error");
 	    		}else if(curVal==""){
 	    			$(this).val("").addClass("error");
+	    		}else{
+	    			$(this).removeClass("error");
+	    		}
+
+	    		if($(this).attr("name") == "photo" &&  curVal==""){
+	    			popup("first");
+	    			return false;
+	    		}else if(curVal=="" && $(this).attr("name") != "photo"){
+	    			popup("second");
 	    		}
 	    	})
 
+
+	    	if($(".error").length<=0){
+	    		var submitText = {
+	    			"photo" : getVal("photo"),
+	    			"name" : getVal("name"),
+	    			"fun" : getVal("function"),
+	    			"location" : getVal("location"),
+	    			"email" : getVal("email")
+	    		}
+	    		console.log(submitText)
+	    		formsubmit();
+	    		return false;
+	    	}
 	    }
 
-	    $(".formsubmit").click(function(){
-	    	checkForm(".txt");
-	    })
+    $(".formsubmit").click(function(){
+    	checkForm(".txt");
+    })
 
+    $(".close_btn").click(function(){
+    	popupclose()
+    })
 
 })(jQuery);
