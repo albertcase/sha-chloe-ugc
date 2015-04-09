@@ -32,9 +32,8 @@
 					<img src="images/step1.png" width="100%" />
 				</div>
 				<div class="bg upload">
-					<a href="">
-						<p class="txt">Upload your picture</p>
-				    </a>
+					<input type="file" name="file" class="input_file">
+					<input type="text" name="photo" id="photoUrl" class="txt" placeholder="Upload your picture">
 				</div>	
 			</div>
 			<div class="step2">
@@ -42,50 +41,37 @@
 					<img src="images/step2.png" width="100%" />
 				</div>
 				<div class="bg name">
-					<input type="text" id="name" placeholder="First & last name" name="name" data-role="none" class="txt" />
-					
+					<input type="text" placeholder="First & last name" name="name" data-role="none" class="txt" />
 				</div>
 				<div class="bg func">
-					<input type="text" id="function" placeholder="Function" name="function" data-role="none" class="txt" />
+					<input type="text" placeholder="Function" name="function" data-role="none" class="txt" />
 				</div>
 				<div class="bg loc">
-					<input type="text" id="location" placeholder="Location" name="location" data-role="none" class="txt" />
+					<input type="text" placeholder="Location" name="location" data-role="none" class="txt" />
 					
 				</div>
 				<div class="bg email">
-					<input type="text" id="email" placeholder="E-mail address" name="email" data-role="none" class="txt" />
+					<input type="text" placeholder="E-mail address" name="email" data-role="none" class="txt" />
 					
 				</div>
      			<div class="bg req">
-					<a href="">
-						<p class="txtBold">Request a portrait</p>
-					</a>	
+					<a href="javascript:;" class="formsubmit">Request a portrait</a>	
 				</div>	
 
 			</div>	
 		</div>
 		<div class="tip first">
-			<div class="close_btn">
-				<a href="javascript:void(0);" class="hide">
-	                <img src="/images/close.png" width="100%"/>
-	            </a>
-        	</div>
+			<a href="javascript:;" class="close_btn">
+                <img src="/images/close.png" width="100%"/>
+            </a>
 		</div>
 
-		 <div class="tip second">
-			<div class="close_btn">
-				<a href="javascript:void(0);" class="hide">
-	                <img src="/images/close.png" width="100%"/>
-	            </a>
-        	</div>
-			
-		</div>		
 
 		
 	
 
 
 
-
-	</body>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
 </html>
