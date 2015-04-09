@@ -1,25 +1,26 @@
-@CHARSET "ISO-8859-1";
+
 /* Reset CSS
  * --------------------------------------- */
+
+
+@font-face {
+  font-family: "bell";
+  src: url("../font/BELL.TTF"); 
+}
+
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
 form,fieldset,input,textarea,p,blockquote,th,td {
     padding: 0;
     margin: 0;
-    font-family: "SimSun";
+    font-family: bell;
 }
 a{
 	text-decoration:none;
 }
-table {
-    border-spacing: 0;
-}
-fieldset,img {
+img {
     border: 0;
 }
-address,caption,cite,code,dfn,em,strong,th,var {
-    font-weight: normal;
-    font-style: normal;
-}
+
 strong{
 	font-weight: bold;
 }
@@ -28,32 +29,14 @@ ol,ul {
     margin:0;
     padding:0;
 }
-caption,th {
-    text-align: left;
 
-}
-h1,h2,h3,h4,h5,h6 {
-    font-weight: normal;
-    font-size: 100%;
-    margin:0;
-    padding:0;
-    color:#444;
-}
 q:before,q:after {
     content:'';
-}
-abbr,acronym { border: 0;
 }
 
 
 /* Custom CSS
  * --------------------------------------- */
-body{
-	font-family: arial,helvetica;
-	color: #333;
-	color: rgba(0,0,0,0.5);
-	background: #000;
-}
 
 /* 阻止旋转屏幕时自动调整字体大小 */
 * { -webkit-text-size-adjust: none;}
@@ -91,6 +74,96 @@ body{
 	#heng{
 		display: inline-block;
 	}
+}
+body{
+   width: 100%; 
+   height: 100%;	
+   font-size: 65%;
+   text-align: center;
+   background: #fff;
+   border: .8em solid #f8e5c8;
+
+}
+
+/* start */
+#header{
+	width: 40%; 
+	display:inline-block;
+	margin: 1.2em 0 0 0;
+	position: relative; 
+	z-index: 2;
+
+}
+.title{
+	width: 44%;
+	margin: 1em 0 0 28%;
+	position: relative; 
+	z-index: 2;
+
+}
+.step1{
+	position: relative; 
+	z-index: 2;
+	margin-top:-.2em;
+
+
+}
+.step2{
+	position: relative; 
+	z-index: 2;
+	margin-top:-2em;
+
+
+}
+.intro{
+	width: 38%; 
+	margin: 2em 0 0 31%;
+	position: relative; 
+	z-index: 2;
+
+}
+.bg{
+	width: 60%;
+	height:4em; 
+	display: inline-block; 
+	background:url("../images/button.png") no-repeat center top; 
+	background-size: 100% auto;
+	margin: 0.6em 0 0 0;
+	overflow: hidden;	
+}
+input{
+	background: none;
+	border: none;
+	text-align: center;
+
+}
+input::-webkit-input-placeholder {
+	color: #000 !important; 
+}
+input:-moz-placeholder {
+	color: #000 !important; 
+}
+input::-moz-placeholder {
+	color: #000 !important; 
+}
+input:-ms-input-placeholder {
+	color: #000 !important; 
+}
+.txt{
+	color: #000;
+	font-size: 1.6em;
+	font-family: bell;
+	padding-top: .5em;
+}
+.txtBold{
+	color: #000;
+	font-size: 1.6em;
+	font-weight: bold;
+	font-family: bell;
+	padding-top: .5em;
+}
+.req{
+    margin: 2.4em 0 ;
 }
 
 
