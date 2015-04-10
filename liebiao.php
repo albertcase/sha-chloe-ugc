@@ -39,7 +39,7 @@ for($i=0;$i<count($rs);$i++)
 	?>
 		   <tr>
 	          <td align='center'><?php echo $rs[$i]['id']; ?></td>
-	          <td align='center'><?php echo $rs[$i]['photo']; ?></td>
+	          <td align='center'><img height="200px" src="<?php echo $rs[$i]['photo']; ?>"></td>
 	          <td align='center'><?php echo $rs[$i]['name']; ?></td>
 	          <td align='center'><?php echo $rs[$i]['function']; ?></td>
 	          <td align='center'><?php echo $rs[$i]['location']; ?></td>
