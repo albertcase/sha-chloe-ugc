@@ -111,14 +111,13 @@ var MAX_HEIGHT = 600;
 
 	    	if($(".error").length<=0){
 	    		var submitText = {
-	    			"photo" : getVal("photo"),
-	    			"name" : getVal("name"),
-	    			"fun" : getVal("function"),
-	    			"location" : getVal("location"),
-	    			"email" : getVal("email")
+	    			"_photo" : getVal("photo"),
+	    			"_name" : getVal("name"),
+	    			"_fun" : getVal("function"),
+	    			"_location" : getVal("location"),
+	    			"_email" : getVal("email")
 	    		}
-	    		console.log(submitText)
-	    		formsubmit();
+	    		formsubmit(submitText.photo,submitText._name,submitText._fun,submitText._location,submitText._email);
 	    		return false;
 	    	}
 	    }
