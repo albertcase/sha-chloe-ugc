@@ -168,7 +168,7 @@ body{
 }
 .bg{
 	width: 60%;
-	height:3.6em; 
+	height:4em; 
 	display: inline-block; 
 	background:url("../images/button.png") no-repeat center top; 
 	background-size: 100% auto;
@@ -197,15 +197,17 @@ input{
 .txt{
 	color: #000;
 	font-size: 1.6em;
-	padding-top: .5em;
+	padding-top: 1em;
 }
 
 .req{
-    margin: 2.4em 0 0 0;
+
+    margin: 1.5em 0 0 0;
     color: #000;
 	font-size: 1.6em;
 	font-weight: bold;
-	height: 
+	padding-top: .2em;
+
 }
 
 .req a{
@@ -257,7 +259,9 @@ input{
 	top: 0;
 	opacity: 0;
 }
-
+.formsubmit{
+	font-weight: bold;
+}
 
 
 
