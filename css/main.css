@@ -92,33 +92,7 @@ input,textarea { -webkit-user-select: auto; -moz-user-select: auto; text-transfo
 
 
 
-/* 横屏css */
 
-#heng{
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    z-index: 999;
-    background: #fffdfd url("../images/heng.png") no-repeat center;
-    background-size: 70% auto;
-    top: 0;
-    left: 0;
-    display: none;
-}
-
-
-/* 设备竖屏时调用该段css代码 */
-@media all and (orientation : portrait){
-	#heng{
-		display: none;
-	}
-}
-/* 设备横屏时调用该段css代码 */
-@media all and (orientation : landscape){
-	#heng{
-		display: inline-block;
-	}
-}
 body{
    width: 100%; 
    height: 100%;	
@@ -185,10 +159,9 @@ input{
 
 .bg input{
 	width:90%;
-	height: 86%;
 	display: inline-block;
-	line-height: 27px;
-	padding-top: .4em;
+	height: 36px;
+	line-height: 36px;
 }
 
 .bg input.input_file{
