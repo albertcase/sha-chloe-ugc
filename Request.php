@@ -2,7 +2,6 @@
 session_start();
 include_once('./config/database.php');
 include_once('./config/Pdb.php');
-include_once('./config/rand.php');
 $_POST=$_REQUEST;
 $db=Pdb::getDb();
 if(isset($_POST['model'])){
