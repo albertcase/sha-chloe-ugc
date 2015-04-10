@@ -160,7 +160,7 @@ body{
 }
 .bg{
 	width: 60%;
-	height:4em; 
+	height:3.6em; 
 	display: inline-block; 
 	background:url("../images/button.png") no-repeat center top; 
 	background-size: 100% auto;
@@ -189,6 +189,7 @@ input{
 }
 
 .req{
+
     margin: 1.6em 0 0 0;
     color: #000;
 	font-size: 1.6em;
@@ -198,6 +199,10 @@ input{
 
 .req a{
 	color: #000;
+	width: 100%;
+	height: 36px;
+	line-height: 36px;
+	display: inline-block;
 }
 
 .close_btn{
