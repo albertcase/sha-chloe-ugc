@@ -43,19 +43,37 @@ q:before,q:after {
 * { font-weight: normal; font-style: normal;}
 *, *:after, *:before { -webkit-box-sizing: border-box;  -moz-box-sizing: border-box; box-sizing: border-box; padding: 0; margin: 0;}
 
+a:hover, a:active,input,select {outline: none;}
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input[type="text"], select, textarea {margin: 0; padding: 0;-webkit-appearance:none; }
+
+/* 链接长按时不触发系统的菜单，也可用于img，在不想让用户长按将图片保存至相册时使用，默认禁止链接和图片 */
+a,img { -webkit-touch-callout: none;}
+
+/* 去除input和输入框的默认样式，并默认赋予30%的黑色背景 */
+input { /*-webkit-appearance: none;*/ border: none; color:#000; }
+textarea { border: none; color:#000; }
+
+/* 去除iphone中按下时的高亮效果 */
+/* 无法选择复制内容 */
+* { -webkit-user-select: none; -moz-user-select: none; -webkit-tap-highlight-color: rgba(0,0,0,0);}
+input,textarea { -webkit-user-select: auto; -moz-user-select: auto; text-transform:Capitalize; }
+
+
 
 
 ::-webkit-input-placeholder { /* WebKit browsers */
-    color:    #000;
+    color:    #666;
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    color:    #000;
+    color:    #666;
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
-    color:    #000;
+    color:    #666;
 }
 :-ms-input-placeholder { /* Internet Explorer 10+ */
-    color:    #000;
+    color:    #666;
 }
 
 
@@ -71,16 +89,6 @@ q:before,q:after {
 .error:-ms-input-placeholder { /* Internet Explorer 10+ */
     color:    #f00;
 }
-
-
- input:focus{
-         outline:none;
- }
-
-
-
-
-
 
 
 
@@ -177,9 +185,13 @@ input{
 
 .bg input{
 	width:90%;
-	height: 70%;
+	height: 86%;
 	display: inline-block;
-	line-height: 16px;
+	line-height: 27px;
+}
+
+.bg input.input_file{
+	width:100%;
 }
 
 .txt{

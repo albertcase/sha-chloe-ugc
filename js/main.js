@@ -32,7 +32,7 @@ var MAX_HEIGHT = 600;
 				ctx.drawImage(image, 0, 0, image.width, image.height);
 				var mbase64 = canvas.toDataURL("image/jpeg",0.6);
 				ctx=null;
-				$(mtarget).val(mbase64.split("base64,")[1]);
+				$(mtarget).val(mbase64);
 			};
 			image.src = src;
 		}
@@ -117,7 +117,7 @@ var MAX_HEIGHT = 600;
 	    			"_location" : getVal("location"),
 	    			"_email" : getVal("email")
 	    		}
-	    		formsubmit(submitText.photo,submitText._name,submitText._fun,submitText._location,submitText._email);
+	    		formsubmit(submitText._photo,submitText._name,submitText._fun,submitText._location,submitText._email);
 	    		return false;
 	    	}
 	    }
