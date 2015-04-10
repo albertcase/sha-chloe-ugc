@@ -4,7 +4,6 @@ include_once('./config/Pdb.php');
 include_once('./config/Pager.class.php');
 $db = Pdb::getDb();
 $rowcount = $db->getOne("SELECT count(*) as num FROM user_info");
-//$rowcount=$db->getOne("SELECT count(id) as num FROM trio_weiboMsg");
 
 $nowindex = 1;
 if(isset($_GET['page'])){
