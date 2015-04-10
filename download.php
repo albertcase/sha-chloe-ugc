@@ -1,9 +1,12 @@
 <?php
-if(isset($_GET['img'])){
-	$filename = $_GET['img'];//图片地址,可以绝对地址也可以相对地址
-	header("Content-Type: application/force-download");
-	header('Content-Disposition: attachment; filename="'.$filename.'"');
-	$img = file_get_contents($filename); 
-	echo $img;
+if(isset($_GET["img"])){ 
+
+$filename=$_GET["img"];//获取参数
+header('Content-Description: File Transfer');
+header('Content-Type: application/force-download');
+header("Content-Disposition: attachment; filename=" .$filename);
+//注意：header函数前确保没有任何输出 
+readfile(".".$filename);
+exit;//结束程序 
 }
 ?>

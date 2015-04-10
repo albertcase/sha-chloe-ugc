@@ -67,6 +67,7 @@ $(document).ready(function() {
 					<tr>
 						<th>ID</th>
 						<th>PHOTO</th>
+						<th>DOWNLOAD</th>
 						<th>NAME</th>
 						<th>FUNCTION</th>
 						<th>LOCATION</th>
@@ -83,6 +84,7 @@ $(document).ready(function() {
 					<tr>
 						<td align="center"><?php echo $rs[$i]['id']; ?></td>
 						<td align="center"><img height="200px" src="<?php echo $rs[$i]['photo']; ?>"></td>
+						<td align="center"><a href="/download.php?img=<?php echo $rs[$i]['photo']; ?>" target="_blank">CLICK IT</a></td>
 						<td align="center"><?php echo $rs[$i]['name']; ?></td>
 						<td align="center"><?php echo $rs[$i]['function']; ?></td>
 						<td align="center"><?php echo $rs[$i]['location']; ?></td>
