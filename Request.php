@@ -33,10 +33,9 @@ if(isset($_POST['model'])){
 	        fwrite($file,$jpg);//写入  
 	        fclose($file);//关闭  
 	          
-	        $imageSourceUrl = "/upload/img/".$filename;  
-	          
+	        $imageSourceUrl = "/upload/img/".$filename;   
 	        //图片是否存在  
-	        if(!file_exists($imageSourceUrl))  
+	        if(!file_exists(".".$imageSourceUrl))  
 	        {  
 	            print 'createFail';  
 	            exit();  
