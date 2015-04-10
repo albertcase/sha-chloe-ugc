@@ -185,15 +185,15 @@ input{
 .txt{
 	color: #000;
 	font-size: 1.6em;
-	padding-top: .5em;
+	padding-top: 1em;
 }
 
 .req{
-    margin: 2.4em 0 ;
+    margin: 1.6em 0 0 0;
     color: #000;
 	font-size: 1.6em;
 	font-weight: bold;
-	padding-top: .5em;
+	padding-top: .6em;
 }
 
 .req a{
@@ -241,7 +241,9 @@ input{
 	top: 0;
 	opacity: 0;
 }
-
+.formsubmit{
+	font-weight: bold;
+}
 
 
 
