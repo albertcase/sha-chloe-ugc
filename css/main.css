@@ -142,7 +142,7 @@ body{
 }
 .bg{
 	width: 60%;
-	height:4em; 
+	height:45px; 
 	display: inline-block; 
 	background:url("../images/button.png") no-repeat center top; 
 	background-size: 100% auto;
@@ -160,8 +160,8 @@ input{
 .bg input{
 	width:90%;
 	display: inline-block;
-	height: 36px;
-	line-height: 36px;
+	height: 42px;
+	line-height: 42px;
 }
 
 .bg input.input_file{
