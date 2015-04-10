@@ -2,7 +2,6 @@
 session_start();
 include_once('./config/database.php');
 include_once('./config/Pdb.php');
-include_once('./config/rand.php');
 $_POST=$_REQUEST;
 $db=Pdb::getDb();
 if(isset($_POST['model'])){
@@ -40,7 +39,7 @@ if(isset($_POST['model'])){
 	            print 'createFail';  
 	            exit();  
 	        } 
-			$sql="insert into  user_info set photo=".$db->quote($imageSourceUrl).",name=".$db->quote($name).",funciton=".$db->quote($funciton).",location=".$db->quote($location).",email=".$db->quote($email);
+			$sql="insert into  user_info set photo=".$db->quote($imageSourceUrl).",name=".$db->quote($name).",function=".$db->quote($function).",location=".$db->quote($location).",email=".$db->quote($email);
 			$db->execute($sql);
 			print json_encode(array("code"=>1,"msg"=>"提交成功"));
 			exit;
