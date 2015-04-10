@@ -48,7 +48,7 @@ $(document).ready(function() {
 				},
 				"targets": 0
 			},
-			{ "visible": false,  "targets": [ 3 ] }
+			/*{ "visible": true,  "targets": [ 3 ] }*/
 		]
 	} );
 } );
@@ -59,8 +59,7 @@ $(document).ready(function() {
 
 <body class="dt-example">
 	<div class="container">
-		<section>
-			
+		<section>	
             <h1 style="margin-bottom:50px; text-align:center">Chloe Database</h1>
 			<table id="example" class="display" cellspacing="0" width="100%" >
 				<thead>
@@ -91,18 +90,11 @@ $(document).ready(function() {
 						<td align="center"><?php echo $rs[$i]['email']; ?></td>
 						<td align="center"><?php echo $rs[$i]['createtime']; ?></td>
 					</tr>
-
-
 					<?php	    
 					}
-					?>
-
-					
+					?>	
 				</tbody>
-			</table>
-
-			
-			</div>
+			</table>			
 		</section>
 	</div>
 
