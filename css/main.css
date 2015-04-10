@@ -188,6 +188,7 @@ input{
 	height: 86%;
 	display: inline-block;
 	line-height: 27px;
+	padding-top: .4em;
 }
 
 .bg input.input_file{
@@ -206,15 +207,13 @@ input{
     color: #000;
 	font-size: 1.6em;
 	font-weight: bold;
-	padding-top: .2em;
-
 }
 
 .req a{
 	color: #000;
 	width: 100%;
 	height: 36px;
-	line-height: 36px;
+	line-height: 29px;
 	display: inline-block;
 }
 
@@ -242,12 +241,13 @@ input{
 	width: 80%;
 	height:50%;
 	display: inline-block; 
-	position: absolute;
-	top:30%;
-	left:10%;
+	position:fixed;
+	top:50%;
+	left:50%;
 	z-index: 10;
 	overflow: hidden;
 	display: none;
+	margin: -25% 0 0 -40%;
 }
 
 
