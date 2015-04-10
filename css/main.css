@@ -188,6 +188,7 @@ input{
 	height: 86%;
 	display: inline-block;
 	line-height: 27px;
+	padding-top: .4em;
 }
 
 .bg input.input_file{
