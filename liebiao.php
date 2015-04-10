@@ -28,8 +28,9 @@ $rs = $db->getAll($sql,true);
 <form action='' method='post'>
 <table border='1' width='100%'>
 <tr>
-<td width='50' align='center'>id</td>
+<td width='50' align='center'>ID</td>
 <td width='50' align='center'>photo</td>
+<td width='50' align='center'>download</td>
 <td width='100' align='center'>name</td>
 <td width='80' align='center'>function</td>
 <td width='300' align='center'>location</td>
@@ -43,6 +44,7 @@ $rs = $db->getAll($sql,true);
 	   <tr>
           <td align='center'><?php echo $rs[$i]['id']; ?></td>
           <td align='center'><img height="200px" src="<?php echo $rs[$i]['photo']; ?>"></td>
+          <td align='center'><a href="/download.php?img=<?php echo $rs[$i]['photo']; ?>" target="_blank">点击下载</a></td>
           <td align='center'><?php echo $rs[$i]['name']; ?></td>
           <td align='center'><?php echo $rs[$i]['function']; ?></td>
           <td align='center'><?php echo $rs[$i]['location']; ?></td>
