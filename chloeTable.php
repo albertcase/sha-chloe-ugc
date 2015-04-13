@@ -48,7 +48,7 @@ $(document).ready(function() {
 				},
 				"targets": 0
 			},
-			{ "visible": false,  "targets": [ 3 ] }
+			{ "visible": true,  "targets": [ 3 ] }
 		]
 	} );
 } );
@@ -61,7 +61,7 @@ $(document).ready(function() {
 	<div class="container">
 		<section>
 			
-            <h1 style="margin-bottom:50px; text-align:center">Chloe Database</h1>
+            <h1 style="margin-bottom:50px; text-align:center">Chloé Database</h1>
 			<table id="example" class="display" cellspacing="0" width="100%" >
 				<thead>
 					<tr>
@@ -84,7 +84,7 @@ $(document).ready(function() {
 					<tr>
 						<td align="center"><?php echo $rs[$i]['id']; ?></td>
 						<td align="center"><img height="200px" src="<?php echo $rs[$i]['photo']; ?>"></td>
-						<td align="center"><a href="/download.php?img=<?php echo $rs[$i]['photo']; ?>" target="_blank">CLICK IT</a></td>
+						<td align="center"><a href="/download.php?img=<?php echo $rs[$i]['photo']; ?>" target="_blank">CLICK IT</a></td>szzzzz
 						<td align="center"><?php echo $rs[$i]['name']; ?></td>
 						<td align="center"><?php echo $rs[$i]['function']; ?></td>
 						<td align="center"><?php echo $rs[$i]['location']; ?></td>
