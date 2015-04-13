@@ -1,20 +1,19 @@
 <?php
-include './config/database.php';
-include_once('./config/Pdb.php');
-include './config/Pager.class.php';
-$db = Pdb::getDb();
-$rowcount=$db->getOne("SELECT count(*) as num FROM user_info");
-//$rowcount=$db->getOne("SELECT count(id) as num FROM trio_weiboMsg");
+	include './config/database.php';
+	include_once('./config/Pdb.php');
+	include './config/Pager.class.php';
+	$db = Pdb::getDb();
+	$rowcount=$db->getOne("SELECT count(*) as num FROM user_info");
 
-$nowindex=1;
-if(isset($_GET['page'])){
-   $nowindex=$_GET['page'];
-}else if(isset($_GET["PB_Page_Select"])){
-	$nowindex=$_GET["PB_Page_Select"];
-}
-$page=new Pager(array("nowindex"=>$nowindex,"total"=>$rowcount,"perpage"=>30,"style"=>"page_break"));
-$sql="SELECT * FROM user_info  ORDER BY id DESC LIMIT $page->offset,30";
-$rs=$db->getAll($sql,true);
+	$nowindex=1;
+	if(isset($_GET['page'])){
+	   $nowindex=$_GET['page'];
+	}else if(isset($_GET["PB_Page_Select"])){
+		$nowindex=$_GET["PB_Page_Select"];
+	}
+	$page=new Pager(array("nowindex"=>$nowindex,"total"=>$rowcount,"perpage"=>30,"style"=>"page_break"));
+	$sql="SELECT * FROM user_info  ORDER BY id DESC LIMIT $page->offset,30";
+	$rs=$db->getAll($sql,true);
 ?>
 <!DOCTYPE html>
 <html>
@@ -50,8 +49,8 @@ $(document).ready(function() {
 			},
 			{ "visible": true,  "targets": [ 3 ] }
 		]
-	} );
-} );
+	});
+});
 
 
 	</script>
@@ -75,7 +74,6 @@ $(document).ready(function() {
 						<th>CREATE-AT</th>
 					</tr>
 				</thead>
-                
 
 				<tbody>
 					<?php
@@ -83,26 +81,19 @@ $(document).ready(function() {
 					?>
 					<tr>
 						<td align="center"><?php echo $rs[$i]['id']; ?></td>
-						<td align="center"><img height="200px" src="<?php echo $rs[$i]['photo']; ?>"></td>
-						<td align="center"><a href="/download.php?img=<?php echo $rs[$i]['photo']; ?>" target="_blank">CLICK IT</a></td>szzzzz
+						<td align="center"><img height="150px" src="<?php echo $rs[$i]['photo']; ?>"></td>
+						<td align="center"><a href="/download.php?img=<?php echo $rs[$i]['photo']; ?>" target="_blank">CLICK IT</a></td>
 						<td align="center"><?php echo $rs[$i]['name']; ?></td>
 						<td align="center"><?php echo $rs[$i]['function']; ?></td>
 						<td align="center"><?php echo $rs[$i]['location']; ?></td>
 						<td align="center"><?php echo $rs[$i]['email']; ?></td>
 						<td align="center"><?php echo $rs[$i]['createtime']; ?></td>
 					</tr>
-
-
 					<?php	    
 					}
-					?>
-
-					
+					?>	
 				</tbody>
-			</table>
-
-			
-			</div>
+			</table>			
 		</section>
 	</div>
 
