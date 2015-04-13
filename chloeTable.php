@@ -1,4 +1,8 @@
 <?php
+session_start();
+if(!isset($_SESSION['login_user'])){
+	Header("Location: ./login.html");
+}
 	include './config/database.php';
 	include_once('./config/Pdb.php');
 	include './config/Pager.class.php';
@@ -47,7 +51,7 @@ $(document).ready(function() {
 				},
 				"targets": 0
 			},
-			/*{ "visible": true,  "targets": [ 3 ] }*/
+			{ "visible": true,  "targets": [ 3 ] }
 		]
 	});
 });
@@ -58,8 +62,9 @@ $(document).ready(function() {
 
 <body class="dt-example">
 	<div class="container">
-		<section>	
-            <h1 style="margin-bottom:50px; text-align:center">Chloe Database</h1>
+		<section>
+			
+            <h1 style="margin-bottom:50px; text-align:center">Chloé Database</h1>
 			<table id="example" class="display" cellspacing="0" width="100%" >
 				<thead>
 					<tr>
