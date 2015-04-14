@@ -208,7 +208,7 @@ input{
 
 .tip{
 	width: 80%;
-	height:50%;
+	height:30%;
 	display: inline-block; 
 	position:fixed;
 	top:50%;
@@ -216,7 +216,7 @@ input{
 	z-index: 10;
 	overflow: hidden;
 	display: none;
-	margin: -25% 0 0 -40%;
+	margin: -15% 0 0 -40%;
 }
 
 
