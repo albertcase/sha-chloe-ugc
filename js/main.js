@@ -92,7 +92,7 @@ var MAX_HEIGHT = 600;
 	    		var curVal = $(this).val();
 
 	    		if($(this).attr("name") == "email" && !isEmail(curVal)){
-	    			popup("second");
+	    			//popup("second");
 	    			$(this).val("").addClass("error");
 	    		}else if(curVal==""){
 	    			$(this).val("").addClass("error");
@@ -101,10 +101,10 @@ var MAX_HEIGHT = 600;
 	    		}
 
 	    		if($(this).attr("name") == "photo" &&  curVal==""){
-	    			popup("first");
+	    			//popup("first");
 	    			return false;
 	    		}else if(curVal=="" && $(this).attr("name") != "photo"){
-	    			popup("second");
+	    			//popup("second");
 	    		}
 	    	})
 
