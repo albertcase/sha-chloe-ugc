@@ -4,40 +4,21 @@
 var MAX_HEIGHT = 600;
 
 		function readURL(input,ID_VAR) {
+
 	        if (input.files && input.files[0]) {
-			
-				var reader = new FileReader();
-				reader.onload = function (e) {
-						render(e.target.result,ID_VAR);
-				}
-				reader.readAsDataURL(input.files[0]);
-         		
+		   	    // MegaPixImage constructor accepts File/Blob object.
+			    var mpImg = new MegaPixImage(input.files[0]);
+
+			    // Render resized image into image element using quality option.
+			    // Quality option is valid when rendering into image element.
+			    var resImg = document.getElementById('resultImage');
+			    var aaa = mpImg.render(resImg, { maxHeight: MAX_HEIGHT, quality: 0.5 }, function(src){
+			    	$(ID_VAR).val(src);
+			    });
 			}
 			return true;
+         		
 		}
-	    
-
-		function render(src,mtarget){
-			var image = new Image();
-			image.onload = function(){
-				var canvas = document.createElement('canvas');
-				if(image.height > MAX_HEIGHT) {
-					image.width *= MAX_HEIGHT / image.height;
-					image.height = MAX_HEIGHT;
-				}
-				var ctx = canvas.getContext("2d");
-				ctx.clearRect(0, 0, canvas.width, canvas.height);
-				canvas.width = image.width;
-				canvas.height = image.height;
-				ctx.drawImage(image, 0, 0, image.width, image.height);
-				var mbase64 = canvas.toDataURL("image/jpeg",0.6);
-				ctx=null;
-				$(mtarget).val(mbase64);
-			};
-			image.src = src;
-		}
-
-
 
 	    $(".input_file").change(function(){
 	        readURL(this,"#photoUrl");
