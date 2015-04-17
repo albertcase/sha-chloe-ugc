@@ -8,20 +8,6 @@ var MAX_HEIGHT = 600;
 			
 				var reader = new FileReader();
 				reader.onload = function (e) {
-
-					var cssRotate=0;
-					EXIF.getData(input.files[0], function() {
-							var image_orientation=EXIF.getTag(this, "Orientation");
-							alert(image_orientation)
-							
-							// if(image_orientation==3)cssRotate=180;
-							// if(image_orientation==6)cssRotate=90;
-							// if(image_orientation==8)cssRotate=-90;
-
-
-
-
-					}
 						render(e.target.result,ID_VAR);
 				}
 				reader.readAsDataURL(input.files[0]);
