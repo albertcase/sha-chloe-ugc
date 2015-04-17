@@ -12,7 +12,7 @@ var MAX_HEIGHT = 600;
 			    // Render resized image into image element using quality option.
 			    // Quality option is valid when rendering into image element.
 			    var resImg = document.getElementById('resultImage');
-			    var aaa = mpImg.render(resImg, { maxHeight: MAX_HEIGHT, quality: 0.5 }, function(src){
+			    mpImg.render(resImg, { maxHeight: MAX_HEIGHT, quality: 1 }, function(src){
 			    	$(ID_VAR).val(src);
 			    });
 			}
