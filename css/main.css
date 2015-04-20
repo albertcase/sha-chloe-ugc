@@ -205,6 +205,18 @@ input{
 	background-size: 100% auto;
 
 }
+#loaded{
+	width: 80%;
+	height:36%;
+	display: inline-block; 
+	position:fixed;
+	top:36%;
+	left:10%;
+	z-index:10;
+	overflow: hidden;
+	display: none;
+}
+
 
 .tip{
 	width: 80%;

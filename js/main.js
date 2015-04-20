@@ -38,16 +38,16 @@ var MAX_HEIGHT = 600;
 			       "function":_function,
 			       "location":_location,
 			       "email":_email
-			    },
-				success: function(data){
-					if(data.code == 1){
+			    }
+			}).done(function(data){
+				$("#loaded").hide(1000);
+				if(data.code == 1){
 						window.location.href="congratulation.html";
 					}else if(data.code == 2){
 						alert("参数错误");
 					}else{
 						alert("图片未上传");
 					}
-				}
 			});
 		}
 
@@ -98,6 +98,7 @@ var MAX_HEIGHT = 600;
 	    			"_location" : getVal("location"),
 	    			"_email" : getVal("email")
 	    		}
+	    		$("#loaded").show();
 	    		formsubmit(submitText._photo,submitText._name,submitText._fun,submitText._location,submitText._email);
 	    		return false;
 	    	}
