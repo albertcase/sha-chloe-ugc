@@ -14,6 +14,7 @@ var MAX_HEIGHT = 600;
 			    var resImg = document.getElementById('resultImage');
 			    mpImg.render(resImg, { maxHeight: MAX_HEIGHT, quality: 1 }, function(src){
 			    	$(ID_VAR).val(src);
+			    	$("#photoUrl").val(src)
 			    });
 			}
 			return true;
